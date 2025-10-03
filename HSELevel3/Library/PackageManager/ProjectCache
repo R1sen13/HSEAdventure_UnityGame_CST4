@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/mixti/HSELevel3/Packages/manifest.json
+    m_FilePath: D:/HSEAdventure_UnityGame_CST4/HSELevel3/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 638946578521970360
     m_Hash: 120873945
   m_LockFileStatus:
-    m_FilePath: C:/Users/mixti/HSELevel3/Packages/packages-lock.json
+    m_FilePath: D:/HSEAdventure_UnityGame_CST4/HSELevel3/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -19,7 +19,7 @@ m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/mixti/HSELevel3/Packages
+m_ProjectPath: D:/HSEAdventure_UnityGame_CST4/HSELevel3/Packages
 m_EditorVersion: 6000.2.6f1 (cc51a95c0300)
 m_ResolvedPackages:
 - packageId: com.unity.2d.animation@12.0.2
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 12.0.2
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.animation@34e0443c58ed
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.animation@34e0443c58ed
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -200,26 +200,26 @@ m_ResolvedPackages:
   resolvedDependencies:
   - name: com.unity.2d.common
     version: 11.0.1
-  - name: com.unity.2d.sprite
-    version: 1.0.0
+  - name: com.unity.burst
+    version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.2d.sprite
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
   - name: com.unity.modules.physics
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.24
   - name: com.unity.collections
     version: 2.5.7
   - name: com.unity.test-framework
@@ -289,7 +289,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.1
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.aseprite@f6e7e126ac6d
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.aseprite@f6e7e126ac6d
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -350,26 +350,26 @@ m_ResolvedPackages:
   resolvedDependencies:
   - name: com.unity.2d.common
     version: 11.0.1
-  - name: com.unity.2d.sprite
-    version: 1.0.0
+  - name: com.unity.burst
+    version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.2d.sprite
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
   - name: com.unity.modules.physics
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.24
   - name: com.unity.2d.tilemap
     version: 1.0.0
   - name: com.unity.modules.tilemap
@@ -437,7 +437,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.psdimporter@0adcab25a8fd
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.psdimporter@0adcab25a8fd
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -556,26 +556,26 @@ m_ResolvedPackages:
   resolvedDependencies:
   - name: com.unity.2d.common
     version: 11.0.1
-  - name: com.unity.2d.sprite
-    version: 1.0.0
+  - name: com.unity.burst
+    version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.2d.sprite
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
   - name: com.unity.modules.physics
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.24
   - name: com.unity.2d.tilemap
     version: 1.0.0
   - name: com.unity.modules.tilemap
@@ -642,7 +642,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -722,7 +722,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 12.0.1
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.spriteshape@1d246726c231
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.spriteshape@1d246726c231
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -850,26 +850,26 @@ m_ResolvedPackages:
   resolvedDependencies:
   - name: com.unity.2d.common
     version: 11.0.1
-  - name: com.unity.2d.sprite
-    version: 1.0.0
+  - name: com.unity.burst
+    version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.2d.sprite
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
   - name: com.unity.modules.physics
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.24
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -934,7 +934,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.tilemap@aa5f5491174d
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.tilemap@aa5f5491174d
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -1033,7 +1033,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 5.0.1
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.tilemap.extras@2338d989ff2a
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.tilemap.extras@2338d989ff2a
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -1193,7 +1193,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -1369,7 +1369,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.37
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.ide.rider@0baf0f91edc0
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.ide.rider@0baf0f91edc0
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -1459,7 +1459,7 @@ m_ResolvedPackages:
       violations: []
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638929118109900000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
@@ -1476,8 +1476,9 @@ m_ResolvedPackages:
     isDeprecated: 0
     deprecationMessage: 
     isDiscoverable: 1
-  isDeprecated: 0
-  deprecationMessage: 
+  isDeprecated: 1
+  deprecationMessage: '3.3.0.37 has a regression: newly created C# files are not
+    added in the project'
   git:
     hash: 
     revision: 
@@ -1502,7 +1503,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -1573,7 +1574,7 @@ m_ResolvedPackages:
       violations: []
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638786696173840000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
@@ -1618,7 +1619,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.14.2
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -1776,7 +1777,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -1872,7 +1873,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.render-pipelines.universal@1e1527b3a17b
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.render-pipelines.universal@1e1527b3a17b
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal Render Pipeline
@@ -1999,7 +2000,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.test-framework@40b8da2bd3e9
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.test-framework@40b8da2bd3e9
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -2089,7 +2090,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.9
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.timeline@6b9e48457ddb
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.timeline@6b9e48457ddb
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -2287,7 +2288,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.ugui@e375ff18e90f
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.ugui@e375ff18e90f
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -2383,7 +2384,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.7
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.visualscripting@6279e2b7c485
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.visualscripting@6279e2b7c485
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -5281,7 +5282,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -5361,7 +5362,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.render-pipelines.core@317e801bb3aa
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.render-pipelines.core@317e801bb3aa
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Scriptable Render Pipeline Core
@@ -5487,7 +5488,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.shadergraph@5516e0d97518
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.shadergraph@5516e0d97518
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -5603,7 +5604,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal Render Pipeline Config
@@ -5711,7 +5712,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.2d.common@dd402daace1b
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.2d.common@dd402daace1b
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -5800,37 +5801,37 @@ m_ResolvedPackages:
     recommended: 11.0.1
     deprecated: []
   dependencies:
+  - name: com.unity.burst
+    version: 1.8.4
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.mathematics
     version: 1.1.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
   - name: com.unity.modules.uielements
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.24
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.modules.animation
     version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.4
-  resolvedDependencies:
-  - name: com.unity.2d.sprite
-    version: 1.0.0
-  - name: com.unity.mathematics
-    version: 1.3.2
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
   - name: com.unity.modules.physics
     version: 1.0.0
-  - name: com.unity.modules.animation
-    version: 1.0.0
-  - name: com.unity.burst
-    version: 1.8.24
   keywords:
   - 2d
   registry:
@@ -5846,7 +5847,7 @@ m_ResolvedPackages:
       violations: []
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638840901264720000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.common@11.0/manual/index.html
@@ -5887,7 +5888,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.mathematics@8017b507cc74
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5921,9 +5922,11 @@ m_ResolvedPackages:
     - 1.2.6
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     compatible:
     - 1.3.2
-    recommended: 1.3.2
+    - 1.3.3
+    recommended: 1.3.3
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -5986,7 +5989,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.7
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.collections@d49facba0036
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.collections@d49facba0036
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -6078,11 +6081,13 @@ m_ResolvedPackages:
     - 2.6.0-exp.2
     - 2.6.0-pre.3
     - 2.6.0-pre.4
+    - 2.6.2
     compatible:
     - 2.5.7
     - 2.6.0-exp.2
     - 2.6.0-pre.3
     - 2.6.0-pre.4
+    - 2.6.2
     recommended: 2.5.7
     deprecated: []
   dependencies:
@@ -6176,7 +6181,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.3
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.searcher@1e17ce91558d
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.searcher@1e17ce91558d
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -6273,7 +6278,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.24
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.burst@f7a407abf4d5
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.burst@f7a407abf4d5
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -6508,7 +6513,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.rendering.light-transport@2c9279f90d7c
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.rendering.light-transport@2c9279f90d7c
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -6614,7 +6619,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.5
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6644,9 +6649,11 @@ m_ResolvedPackages:
     - 1.10.2
     - 1.11.4
     - 1.11.5
+    - 1.11.6
     compatible:
     - 1.11.5
-    recommended: 1.11.5
+    - 1.11.6
+    recommended: 1.11.6
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -6707,7 +6714,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.0
   source: 1
-  resolvedPath: C:\Users\mixti\HSELevel3\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
+  resolvedPath: D:\HSEAdventure_UnityGame_CST4\HSELevel3\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
