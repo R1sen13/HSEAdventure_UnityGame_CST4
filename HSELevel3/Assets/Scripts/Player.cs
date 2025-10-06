@@ -91,7 +91,14 @@ public class Player : MonoBehaviour
 	    
 	    // Применяем скорость (только по X)
 	    rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
-	    
+	    if(Mathf.Abs(horizontalInput)>0 && isRunning){
+		    	animator.SetBool("isRunning",true);
+		}
+		else{
+			animator.SetBool("isRunning",false);
+		}
+		animator.SetFloat("movex", Mathf.Abs(horizontalInput));
+
 	    // Поворот спрайта
 	    if (Mathf.Abs(horizontalInput) > 0.1f)
 	    {
@@ -107,16 +114,20 @@ public class Player : MonoBehaviour
 	    {
 	        if (jumps == 0)
 	        {
+	        	animator.SetBool("isJumping", true);
 	            PerformJump(jumpForce);
 	            jumps=1;
 	        }
 	        else if (jumps==1)
 	        {
+	        	animator.SetBool("isJumping", true);
 	            PerformJump(jumpForce * 0.9f);
 	            jumps = 2;
 	        }
 	    }
-	    
+	    if (Input.GetKeyUp(KeyCode.Space)){
+			animator.SetBool("isJumping", false);
+	    }
 	    // Переменная высота прыжка (отпускание кнопки)
 	    if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
 	    {
