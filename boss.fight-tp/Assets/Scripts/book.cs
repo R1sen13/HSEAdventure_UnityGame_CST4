@@ -3,13 +3,16 @@ using UnityEngine;
 public class Book : MonoBehaviour
 {
     [Header("Параметры книги")]
+    public float damage = 25f;
     public float lifetime = 3f;         
     public float rotationSpeed = 720f;   
+    public GameObject owner;
 
     private Rigidbody2D rb;
     private Transform visual;
     private float direction = 1f;
     private float speed;
+     
 
     private void Awake()
     {
@@ -64,11 +67,18 @@ public class Book : MonoBehaviour
             visual.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Enemy"))
+        if (collision.gameObject == owner) return;
+        // Проверяем, есть ли компонент Health у того, во что попали
+        Health targetHealth = collision.GetComponent<Health>();
+
+        if (targetHealth != null)
         {
-            Destroy(gameObject);
+            targetHealth.TakeDamage(damage);
+            Debug.Log($"{collision.name} получил {damage} урона от книги");
         }
+
+        Destroy(gameObject); // книга исчезает при столкновении
     }
 }

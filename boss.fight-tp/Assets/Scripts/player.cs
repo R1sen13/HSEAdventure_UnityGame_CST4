@@ -94,6 +94,7 @@ public class player : MonoBehaviour
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
         }
+        anim.SetFloat("move y", Mathf.Abs(rb.linearVelocity.y));
     }
 
     private void HandleGlide()
@@ -125,17 +126,17 @@ public class player : MonoBehaviour
         return;
     }
 
-    // создаём книгу на позиции throwPoint
     GameObject book = Instantiate(bookPrefab, throwPoint.position, Quaternion.identity);
 
     float direction = facingRight ? 1f : -1f;
-    float bookSpeed = throwForce; // используем силу как скорость
-
-    // передаём направление и скорость в книгу
+    float bookSpeed = throwForce; 
     Book bookScript = book.GetComponent<Book>();
-    if (bookScript != null)
+    if (bookScript != null) {
+        bookScript.owner = gameObject; 
         bookScript.Launch(direction, bookSpeed);
     }
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
