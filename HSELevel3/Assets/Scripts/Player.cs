@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
 			animator.SetBool("isRunning",false);
 		}
 		animator.SetFloat("movex", Mathf.Abs(horizontalInput));
+		animator.SetFloat("movey", Mathf.Abs(rb.linearVelocity.y));
 
 	    // Поворот спрайта
 	    if (Mathf.Abs(horizontalInput) > 0.1f)
