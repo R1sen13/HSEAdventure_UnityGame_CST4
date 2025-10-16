@@ -35,6 +35,10 @@ public class BossCat : MonoBehaviour
     public Rigidbody2D rb;
     public Transform player;
 
+    [Header("Audio")]
+    public AudioSource bossMusic;      
+    private bool musicPlaying = false; 
+
     private bool facingRight = true;
 
     void Start()
@@ -55,6 +59,25 @@ public class BossCat : MonoBehaviour
         if (player == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // Если игрок в зоне обнаружения
+        if (distanceToPlayer <= detectionRange)
+        {
+        if (!musicPlaying && bossMusic != null)
+        {
+        bossMusic.Play();
+        musicPlaying = true;
+        }
+    }
+    else
+    {   
+    // Если игрок вышел из зоны, музыка останавливается (опционально)
+    if (musicPlaying && bossMusic != null)
+    {
+        bossMusic.Stop();
+        musicPlaying = false;
+    }
+}
 
         // Смена состояния
         if (distanceToPlayer > detectionRange)
