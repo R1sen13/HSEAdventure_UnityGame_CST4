@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class Player : MonoBehaviour
 {
 	public float walkSpeed = 5f;
@@ -36,6 +37,15 @@ public class Player : MonoBehaviour
 
     private float horizontalInput;
     private float currentSpeed;
+
+    public AudioSource death,jump,coin,crow, background;
+
+
+    IEnumerator NextLevelAfterWait() {
+    	yield return new WaitForSeconds(3.5f);
+    
+    	SceneManager.LoadScene("Game");
+	}
 
 	void Start(){
 		score.text = $"{sc}";
@@ -140,6 +150,13 @@ public class Player : MonoBehaviour
 		if(col.gameObject.CompareTag("ground")){
 			jumps = 0;
 		}
+		if(col.gameObject.CompareTag("death_platform")){
+			background.Stop();
+			death.Play();
+			walkSpeed = 0;
+			runSpeed = 0;
+			StartCoroutine(NextLevelAfterWait());
+		}
 	}
 
 
@@ -159,7 +176,8 @@ public class Player : MonoBehaviour
 	void PerformJump(float force)
 	{
 	    rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
-	    
+	    jump.Play();
+		crow.Play();
 	    // Можно добавить звук прыжка
 	    // AudioManager.Instance.PlaySound("jump");
 	}
@@ -200,6 +218,7 @@ public class Player : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.CompareTag("credit")){
 			Destroy(col.gameObject);
+			coin.Play();
 			sc+=1;
 			score.text = $"{sc}";
 		}
