@@ -35,8 +35,12 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private bool isFacingRight = true;
 
+    private bool isDeath = false;
+
     private float horizontalInput;
     private float currentSpeed;
+
+    public static bool isPaused;
 
     public AudioSource death,jump,coin,crow, background;
 
@@ -68,15 +72,29 @@ public class Player : MonoBehaviour
 
 	void Update()
 	{
-	    GetInput();
-	    HandleAnimations();
-	    HandleJumpInput();
+		if(!isPaused){
+			death.UnPause();
+			background.UnPause();
+		    GetInput();
+		    HandleAnimations();
+		    HandleJumpInput();
+	   	}
+	   	else{
+	   		background.Pause();
+			death.Pause();
+		}
 	}
 
 	void FixedUpdate()
 	{
-	    MoveCharacter();
-	    HandleJumpPhysics();
+		if(!isPaused){
+			death.UnPause();
+		    MoveCharacter();
+		    HandleJumpPhysics();
+		}
+		else{
+			death.Pause();
+		}
 	}
 
 	void GetInput()
@@ -151,11 +169,15 @@ public class Player : MonoBehaviour
 			jumps = 0;
 		}
 		if(col.gameObject.CompareTag("death_platform")){
-			background.Stop();
-			death.Play();
-			walkSpeed = 0;
-			runSpeed = 0;
-			StartCoroutine(NextLevelAfterWait());
+			if(!isDeath){
+				background.Stop();
+				death.Play();
+
+				walkSpeed = 0;
+				runSpeed = 0;
+				StartCoroutine(NextLevelAfterWait());
+			}
+			isDeath = true;
 		}
 	}
 
@@ -176,10 +198,10 @@ public class Player : MonoBehaviour
 	void PerformJump(float force)
 	{
 	    rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
-	    jump.Play();
-		crow.Play();
-	    // Можно добавить звук прыжка
-	    // AudioManager.Instance.PlaySound("jump");
+	    if(!isDeath){
+		    jump.Play();
+			crow.Play();
+		}
 	}
 
 	void HandleAnimations()
@@ -216,6 +238,9 @@ public class Player : MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.CompareTag("ground")){
+			jumps = 0;
+		}
 		if(col.gameObject.CompareTag("credit")){
 			Destroy(col.gameObject);
 			coin.Play();

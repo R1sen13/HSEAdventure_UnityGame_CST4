@@ -457,7 +457,9 @@
 "Assets/Scripts/Camera.cs"
 "Assets/Scripts/Clouds.cs"
 "Assets/Scripts/CloudSpawner.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Timer.cs"
 -langversion:9.0
 /deterministic
 /optimize+
