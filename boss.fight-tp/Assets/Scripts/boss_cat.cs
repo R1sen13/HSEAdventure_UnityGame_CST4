@@ -7,13 +7,16 @@ public class BossCat : MonoBehaviour
 
     [Header("Основные параметры")]
     public float moveSpeed = 2f;
-    public float stopDistance = 3f;
-    public float attackDistance = 2f;
+    public float stopDistance = 3f;     // дистанция, где кот останавливается
+    public float attackRange = 2f;      // радиус удара лапой
     public float detectionRange = 10f;
+    public Animator anim;
 
     [Header("Атака лапой")]
     public float pawCooldown = 2f;
     public int pawDamage = 10;
+    public Transform pawPoint;          // пустышка у лапы
+    public LayerMask playerLayer;       // слой игрока
     private float lastPawAttack;
 
     [Header("Атака книгой")]
@@ -42,9 +45,9 @@ public class BossCat : MonoBehaviour
         if (player == null && GameObject.FindWithTag("Player") != null)
             player = GameObject.FindWithTag("Player").transform;
 
-        currentState = BossState.Idle;
         nextBookTime = Time.time + bookCooldown;
         nextJumpTime = Time.time + jumpInterval;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,17 +56,21 @@ public class BossCat : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Выбор состояния
-        if (distanceToPlayer <= attackDistance)
-            SetState(BossState.Attack);
-        else if (distanceToPlayer <= stopDistance)
+        // Смена состояния
+        if (distanceToPlayer > detectionRange)
+        {
             SetState(BossState.Idle);
-        else if (distanceToPlayer <= detectionRange)
+        }
+        else if (distanceToPlayer > stopDistance)
+        {
             SetState(BossState.Walk);
+        }
         else
-            SetState(BossState.Idle);
+        {
+            SetState(BossState.Attack);
+        }
 
-        // Действия по состоянию
+        // Поведение
         switch (currentState)
         {
             case BossState.Idle:
@@ -76,19 +83,18 @@ public class BossCat : MonoBehaviour
 
             case BossState.Attack:
                 StopMoving();
-                TryPawAttack(distanceToPlayer);
+                TryPawAttack();
                 break;
         }
 
-        // Периодически бросает книги
+        // Бросок книги
         if (Time.time >= nextBookTime)
         {
-            SetState(BossState.Throw);
             ThrowBook();
             nextBookTime = Time.time + bookCooldown;
         }
 
-        // Иногда прыгает
+        // Прыжок
         if (Time.time >= nextJumpTime)
         {
             Jump();
@@ -97,8 +103,6 @@ public class BossCat : MonoBehaviour
 
         FlipTowardsPlayer();
     }
-
-    // ---------------- ЛОГИКА СОСТОЯНИЙ ----------------
 
     private void SetState(BossState newState)
     {
@@ -112,6 +116,7 @@ public class BossCat : MonoBehaviour
 
         float direction = Mathf.Sign(player.position.x - transform.position.x);
         rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
+        anim.SetFloat("move x", Mathf.Abs(rb.linearVelocity.x));
     }
 
     private void StopMoving()
@@ -122,7 +127,12 @@ public class BossCat : MonoBehaviour
     private void FlipTowardsPlayer()
     {
         if (player == null) return;
-
+        if (pawPoint != null)
+    {
+        Vector3 pos = pawPoint.localPosition;
+        pos.x = Mathf.Abs(pos.x) * (facingRight ? 1 : -1);
+        pawPoint.localPosition = pos;
+    }
         bool shouldFaceRight = player.position.x > transform.position.x;
         if (shouldFaceRight != facingRight)
         {
@@ -133,31 +143,40 @@ public class BossCat : MonoBehaviour
         }
     }
 
-    // ---------------- АТАКИ ----------------
+    private void TryPawAttack()
+{
+    if (Time.time - lastPawAttack < pawCooldown) return;
+    lastPawAttack = Time.time;
 
-    private void TryPawAttack(float distance)
+    // Проверяем, есть ли игрок в радиусе атаки
+    Collider2D[] hits = Physics2D.OverlapCircleAll(pawPoint.position, attackRange, playerLayer);
+
+    foreach (Collider2D hit in hits)
     {
-        if (Time.time - lastPawAttack < pawCooldown) return;
-
-        lastPawAttack = Time.time;
-
-        // Здесь можно добавить эффект или проверку попадания
-        if (distance <= attackDistance)
+        Health playerHealth = hit.GetComponent<Health>();
+        if (playerHealth != null)
         {
-            // Проверяем, есть ли у игрока скрипт Health
-            Health playerHealth = player.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(pawDamage);
-            }
+            playerHealth.TakeDamage(pawDamage);
+            Debug.Log("Boss heat lapoy!");
         }
     }
+}
+
 
     private void ThrowBook()
     {
+        
+
         if (bookPrefab == null || throwPoint == null) return;
 
         GameObject book = Instantiate(bookPrefab, throwPoint.position, Quaternion.identity);
+        book.layer = LayerMask.NameToLayer("Enemy_attack"); 
+
+        Book bookScript = book.GetComponent<Book>();
+        if (bookScript != null)
+        {
+        bookScript.owner = "Enemy"; // помечаем, что снаряд босса
+        }
         Rigidbody2D bookRb = book.GetComponent<Rigidbody2D>();
 
         if (bookRb != null)
@@ -166,15 +185,20 @@ public class BossCat : MonoBehaviour
             bookRb.linearVelocity = new Vector2(direction * throwForce, 0f);
         }
 
-        // Уничтожаем снаряд через 3 секунды
         Destroy(book, 3f);
     }
 
     private void Jump()
     {
-        if (rb != null)
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (pawPoint != null)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(pawPoint.position, attackRange);
         }
     }
 }

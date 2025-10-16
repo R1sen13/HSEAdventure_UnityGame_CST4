@@ -127,12 +127,14 @@ public class player : MonoBehaviour
     }
 
     GameObject book = Instantiate(bookPrefab, throwPoint.position, Quaternion.identity);
+    book.layer = LayerMask.NameToLayer("Player_attack"); 
+
 
     float direction = facingRight ? 1f : -1f;
     float bookSpeed = throwForce; 
     Book bookScript = book.GetComponent<Book>();
     if (bookScript != null) {
-        bookScript.owner = gameObject; 
+        bookScript.owner = "Player";
         bookScript.Launch(direction, bookSpeed);
     }
     }

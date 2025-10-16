@@ -6,7 +6,7 @@ public class Book : MonoBehaviour
     public float damage = 25f;
     public float lifetime = 3f;         
     public float rotationSpeed = 720f;   
-    public GameObject owner;
+    public string owner;
 
     private Rigidbody2D rb;
     private Transform visual;
@@ -19,12 +19,9 @@ public class Book : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            // полностью отключаем влияние физики на вращение и гравитацию
             rb.freezeRotation = true;
             rb.gravityScale = 0;
         }
-
-        // создаём визуальный слой для вращения (если его нет)
         if (transform.childCount == 0)
         {
             SpriteRenderer original = GetComponent<SpriteRenderer>();
@@ -59,26 +56,25 @@ public class Book : MonoBehaviour
 
     private void Update()
     {
-        // движение вручную (никакой физики)
         transform.position += new Vector3( direction * speed * Time.deltaTime, 0, direction * speed * Time.deltaTime);
 
-        // вращение только визуала
         if (visual != null)
             visual.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
 
-     void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == owner) return;
-        // Проверяем, есть ли компонент Health у того, во что попали
-        Health targetHealth = collision.GetComponent<Health>();
-
-        if (targetHealth != null)
+    // если столкнулись с кем-то, у кого тег отличается от владельца
+    if (!collision.gameObject.CompareTag(owner))
+    {
+        Health health = collision.gameObject.GetComponent<Health>();
+        if (health != null)
         {
-            targetHealth.TakeDamage(damage);
-            Debug.Log($"{collision.name} получил {damage} урона от книги");
+            health.TakeDamage(damage);
         }
 
-        Destroy(gameObject); // книга исчезает при столкновении
+        // уничтожаем книгу при столкновении
+        Destroy(gameObject);
+    }
     }
 }
