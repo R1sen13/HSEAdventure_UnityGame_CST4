@@ -50,6 +50,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlatformScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\BorderScript.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\!CHARACTERS HERE!.txt" />

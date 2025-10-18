@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.2/respin/6000.2.6f2-cc51a95c03' branch; Version is '6000.2.6f2 (4a4dcaec6541) revision 4869578'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jujan" at "2025-10-17T19:54:25.1641374Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jujan" at "2025-10-18T00:30:42.8537505Z"
 OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32694 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-10-17T19:54:25Z
+Date: 2025-10-18T00:30:42Z
 
 COMMAND LINE ARGUMENTS:
 E:\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe
@@ -14,10 +14,14 @@ E:\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe
 AssetImportWorker3
 -projectPath
 E:/Unity_Projects/Projects/HSEDoodle
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 26300, path: "E:/Unity/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 -logFile
 Logs/AssetImportWorker3.log
+[Licensing::Module] LicensingClient has failed validation; ignoring
 -srvPort
-51880
+58995
+-licensingIpc
+LicenseClient-jujan
 -job-worker-count
 7
 -background-job-worker-count
@@ -28,6 +32,15 @@ Logs/AssetImportWorker3.log
 AssetImport
 Successfully changed project path to: E:/Unity_Projects/Projects/HSEDoodle
 E:/Unity_Projects/Projects/HSEDoodle
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.3+a4e98f1
+  Session Id:              1cd7b8ddc93040ebb8de3e08d18ea532
+  Correlation Id:          2327544afe6b18ce2fefe228652ff382
+  External correlation Id: 4518296692956544573
+  Machine Id:              WL6YxV/78b2HbVcLPE44T3pmctw=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jujan" (connect: 0.00s, validation: 0.00s, handshake: 0.64s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jujan-notifications" at "2025-10-18T00:30:43.4939662Z"
+[Licensing::Module] Licensing Background thread has ended after 0.64s
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-allocator-temp-initial-block-size-main=262144"
     "memorysetup-allocator-temp-initial-block-size-worker=262144"
@@ -63,29 +76,18 @@ E:/Unity_Projects/Projects/HSEDoodle
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10980]  Target information:
+Player connection [17860]  Target information:
 
-Player connection [10980]  * "[IP] 26.176.21.100 [Port] 0 [Flags] 2 [Guid] 1071405380 [EditorId] 1071405380 [Version] 1048832 [Id] WindowsEditor(7,CookieCat21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [17860]  * "[IP] 26.176.21.100 [Port] 0 [Flags] 2 [Guid] 2032492364 [EditorId] 2032492364 [Version] 1048832 [Id] WindowsEditor(7,CookieCat21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [10980]  * "[IP] 192.168.1.38 [Port] 0 [Flags] 2 [Guid] 1071405380 [EditorId] 1071405380 [Version] 1048832 [Id] WindowsEditor(7,CookieCat21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [17860]  * "[IP] 192.168.1.38 [Port] 0 [Flags] 2 [Guid] 2032492364 [EditorId] 2032492364 [Version] 1048832 [Id] WindowsEditor(7,CookieCat21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [10980] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [10980] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17860] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [17860] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 26300, path: "E:/Unity/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
-[Licensing::Module] LicensingClient has failed validation; ignoring
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.17.3+a4e98f1
-  Session Id:              6b95e9ed7d39449b985b3ad7687adf14
-  Correlation Id:          2327544afe6b18ce2fefe228652ff382
-  External correlation Id: 2525576235325899268
-  Machine Id:              WL6YxV/78b2HbVcLPE44T3pmctw=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jujan" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jujan-notifications" at "2025-10-17T19:54:25.2020809Z"
-[Licensing::Module] Licensing Background thread has ended after 0.04s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
@@ -93,7 +95,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.05 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.62 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.6f2 (4a4dcaec6541)
 [Subsystems] Discovering subsystems at path E:/Unity/Hub/Editor/6000.2.6f2/Editor/Data/Resources/UnitySubsystems
@@ -111,43 +113,43 @@ Initialize mono
 Mono path[0] = 'E:/Unity/Hub/Editor/6000.2.6f2/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity/Hub/Editor/6000.2.6f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unity/Hub/Editor/6000.2.6f2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56768
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000998 seconds.
-- Loaded All Assemblies, in  0.340 seconds
+Registered in 0.001097 seconds.
+- Loaded All Assemblies, in  1.944 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.280 seconds
-Domain Reload Profiling: 620ms
-	BeginReloadAssembly (132ms)
+- Finished resetting the current domain, in  0.411 seconds
+Domain Reload Profiling: 2356ms
+	BeginReloadAssembly (466ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (124ms)
-		LoadAssemblies (132ms)
+	RebuildCommonClasses (167ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (1050ms)
+	LoadAllAssembliesAndSetupDomain (234ms)
+		LoadAssemblies (464ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (121ms)
-			TypeCache.Refresh (120ms)
-				TypeCache.ScanAssembly (109ms)
+		AnalyzeDomain (230ms)
+			TypeCache.Refresh (229ms)
+				TypeCache.ScanAssembly (212ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (280ms)
+	FinalizeReload (412ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (242ms)
+		SetupLoadedEditorAssemblies (349ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (41ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (53ms)
-			ProcessInitializeOnLoadAttributes (99ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
+			InitializePlatformSupportModulesInManaged (60ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (142ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -162,816 +164,117 @@ Begin MonoManager ReloadAssembly
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  0.698 seconds
-Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.096 seconds
+Refreshing native plugins compatible for Editor in 2.43 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.653 seconds
-Domain Reload Profiling: 1351ms
-	BeginReloadAssembly (180ms)
+- Finished resetting the current domain, in  1.157 seconds
+Domain Reload Profiling: 2253ms
+	BeginReloadAssembly (245ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (447ms)
-		LoadAssemblies (344ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (760ms)
+		LoadAssemblies (479ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (216ms)
-			TypeCache.Refresh (157ms)
-				TypeCache.ScanAssembly (144ms)
-			BuildScriptInfoCaches (48ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (653ms)
+		AnalyzeDomain (427ms)
+			TypeCache.Refresh (318ms)
+				TypeCache.ScanAssembly (294ms)
+			BuildScriptInfoCaches (84ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (1158ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (528ms)
+		SetupLoadedEditorAssemblies (956ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (107ms)
-			ProcessInitializeOnLoadAttributes (322ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
-			AfterProcessingInitializeOnLoad (1ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (218ms)
+			ProcessInitializeOnLoadAttributes (571ms)
+			ProcessInitializeOnLoadMethodAttributes (152ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.42 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.34 seconds
+Refreshing native plugins compatible for Editor in 2.43 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6787 unused Assets / (7.8 MB). Loaded Objects now: 7455.
-Memory consumption went from 147.4 MB to 139.6 MB.
-Total: 9.337300 ms (FindLiveObjects: 0.626100 ms CreateObjectMapping: 0.309400 ms MarkObjects: 5.149600 ms  DeleteObjects: 3.251500 ms)
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6766 unused Assets / (5.8 MB). Loaded Objects now: 7480.
+Memory consumption went from 138.9 MB to 133.1 MB.
+Total: 14.392600 ms (FindLiveObjects: 1.102300 ms CreateObjectMapping: 1.229000 ms MarkObjects: 7.791200 ms  DeleteObjects: 4.268300 ms)
 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  0.639 seconds
-Refreshing native plugins compatible for Editor in 1.57 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.624 seconds
-Domain Reload Profiling: 1266ms
-	BeginReloadAssembly (219ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (48ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (357ms)
-		LoadAssemblies (307ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (160ms)
-			TypeCache.Refresh (5ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (141ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (625ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (489ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (105ms)
-			ProcessInitializeOnLoadAttributes (323ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 1.76 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6785 unused Assets / (7.7 MB). Loaded Objects now: 7459.
-Memory consumption went from 149.6 MB to 141.9 MB.
-Total: 8.320800 ms (FindLiveObjects: 0.692800 ms CreateObjectMapping: 0.505100 ms MarkObjects: 4.181300 ms  DeleteObjects: 2.940800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.648 seconds
-Refreshing native plugins compatible for Editor in 1.69 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.648 seconds
-Domain Reload Profiling: 1298ms
-	BeginReloadAssembly (217ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (371ms)
-		LoadAssemblies (314ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (169ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (149ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (648ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (509ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (111ms)
-			ProcessInitializeOnLoadAttributes (332ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 1.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6785 unused Assets / (7.5 MB). Loaded Objects now: 7462.
-Memory consumption went from 151.1 MB to 143.6 MB.
-Total: 8.367300 ms (FindLiveObjects: 0.672800 ms CreateObjectMapping: 0.391600 ms MarkObjects: 4.333300 ms  DeleteObjects: 2.968800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 221460.826959 seconds.
-  path: Assets/InputSystem_Actions.inputactions
-  artifactKey: Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/InputSystem_Actions.inputactions using Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8fdc2ad04cd734e445880f60e7b76a2e') in 0.3286905 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+  Time since last request: 237898.368161 seconds.
+  path: Assets/Backgrounds/длинный коридор.png
+  artifactKey: Guid(cdb841c46fdeefb47aec41a37e3ff6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/длинный коридор.png using Guid(cdb841c46fdeefb47aec41a37e3ff6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '107158046634a002f85958a1df124a40') in 1.7901886 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/Characters/КНИЖКИ БЕЗ НОЖЕК.png
-  artifactKey: Guid(1403c6d5231562149b20d566f8458554) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/КНИЖКИ БЕЗ НОЖЕК.png using Guid(1403c6d5231562149b20d566f8458554) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '44bfe0b4508f514d8d7e823a0d4b4ef8') in 0.0687851 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Purple.png
-  artifactKey: Guid(248611cc7bb8d85448933cee393ce41e) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Purple.png using Guid(248611cc7bb8d85448933cee393ce41e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a4a284dbdfcc630619718ac904ba34a0') in 0.0191727 seconds
+  path: Assets/Backgrounds/коридор с лампой с рамкой.png
+  artifactKey: Guid(b0b1c57e840d5194384ff56d9dbb7352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/коридор с лампой с рамкой.png using Guid(b0b1c57e840d5194384ff56d9dbb7352) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67e9c2c69d49ec7aa3a59863517b2b67') in 0.0363542 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Characters/Сильно плачущая ворона.png
-  artifactKey: Guid(404f619c61c9968429758cc2b21df18c) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/Сильно плачущая ворона.png using Guid(404f619c61c9968429758cc2b21df18c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4a4f222936e5221995343fdf500afa7c') in 0.0193067 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Falling Platforms/On (32x10).png
-  artifactKey: Guid(a8be9d80391091641bb9404b3f4dd067) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Falling Platforms/On (32x10).png using Guid(a8be9d80391091641bb9404b3f4dd067) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0cd3634671ba25b616eb2bcb49ec0bf5') in 0.0204209 seconds
+  Time since last request: 0.000030 seconds.
+  path: Assets/Backgrounds/ДОМИКИ МАРИО.png
+  artifactKey: Guid(14e7b33fd4dc6f9488bd875633109b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/ДОМИКИ МАРИО.png using Guid(14e7b33fd4dc6f9488bd875633109b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '693a7c149fc5f67121e48bdb57e12ce5') in 0.0459185 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Double Jump (32x32).png
-  artifactKey: Guid(62a315a8619ac644f899c29e008115c0) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Double Jump (32x32).png using Guid(62a315a8619ac644f899c29e008115c0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '212ca6114b085d0331d4f08b213ad1a9') in 0.0254059 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
+  Time since last request: 0.000025 seconds.
   path: Assets/Backgrounds/ГОРОД ЯРИК.png
-  artifactKey: Guid(4ae2dfdc4771d1545a9cd414b51509bf) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Backgrounds/ГОРОД ЯРИК.png using Guid(4ae2dfdc4771d1545a9cd414b51509bf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e30259c761bd09d49111431910e29952') in 0.0179335 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Characters/стоящая ворона лапки врозь.png
-  artifactKey: Guid(4d19cb40ae5f29c488913c0746d18f6a) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/стоящая ворона лапки врозь.png using Guid(4d19cb40ae5f29c488913c0746d18f6a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '74b21c5fba8a320d0c8416c343493ff0') in 0.0181057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Terrain/Terrain (16x16) 1.png
-  artifactKey: Guid(413986c4a668c374d8de72a47621b531) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Terrain/Terrain (16x16) 1.png using Guid(413986c4a668c374d8de72a47621b531) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f7723e3afb88d0c155df72f196bc9d0') in 0.0273469 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Characters/НАДПИСЬ ФЛЕППИ.png
-  artifactKey: Guid(1333138995181dc4f8b780f2716358cf) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/НАДПИСЬ ФЛЕППИ.png using Guid(1333138995181dc4f8b780f2716358cf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '09f82e97e7d9363036ecdf0039a10599') in 0.0515018 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 36
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Double Jump (32x32).png
-  artifactKey: Guid(241f742f0911c3a428eea6612ae23b77) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Double Jump (32x32).png using Guid(241f742f0911c3a428eea6612ae23b77) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c63a0e3b19fca4c4bebeb7cf69abef75') in 0.0246947 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Backgrounds/лампа навесная.png
-  artifactKey: Guid(9b478bd6500506748934c8735be5d85d) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Backgrounds/лампа навесная.png using Guid(9b478bd6500506748934c8735be5d85d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cdc623164993c63c17ecea6ec1198412') in 0.023271 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Fire/Off.png
-  artifactKey: Guid(84b0d89aa2c8bfb4c8c1d378fa972fbd) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Fire/Off.png using Guid(84b0d89aa2c8bfb4c8c1d378fa972fbd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c26af4115e0eafc51d743e83ddbb1f9b') in 0.0169923 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Right Hit (42x42).png
-  artifactKey: Guid(337dc14b4c251b345bc534a6e8df01db) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Right Hit (42x42).png using Guid(337dc14b4c251b345bc534a6e8df01db) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c80088ac027a7054f175246963b0330') in 0.019184 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Other/Dust Particle.png
-  artifactKey: Guid(e7980a08b8e9f3c4bbe56762604cba98) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Other/Dust Particle.png using Guid(e7980a08b8e9f3c4bbe56762604cba98) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'baedc473789c5b3251c6c96314c0aa19') in 0.0182168 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Wall Jump (32x32).png
-  artifactKey: Guid(603abb83490921841976d0f1b2045f23) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Wall Jump (32x32).png using Guid(603abb83490921841976d0f1b2045f23) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8297bdf38eada558a17d804e6cc5c641') in 0.0196571 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Idle (32x32).png
-  artifactKey: Guid(40de9a8703e2e5a47882b0b86451c741) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Idle (32x32).png using Guid(40de9a8703e2e5a47882b0b86451c741) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b652d0966d0d08e31a0b147893266f4') in 0.027208 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Blocks/HitTop (22x22).png
-  artifactKey: Guid(cf4eb9361d321834693bc5dcefbb5c4f) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Blocks/HitTop (22x22).png using Guid(cf4eb9361d321834693bc5dcefbb5c4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fc960428db28da603495b9b0487aab76') in 0.0193584 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Run (32x32).png
-  artifactKey: Guid(97d5ce53f3ac76e4888319c6a53c7ff3) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Run (32x32).png using Guid(97d5ce53f3ac76e4888319c6a53c7ff3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9019ae2c5b1211e8dd75648fb91a1773') in 0.0817973 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Platforms/Brown On (32x8).png
-  artifactKey: Guid(e242b62e7e6caee439fa1d024a8fa5bb) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Platforms/Brown On (32x8).png using Guid(e242b62e7e6caee439fa1d024a8fa5bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ff7c1d214d1e942499dfbc2615ecf6a2') in 0.0292158 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Sand Mud Ice Sliced (16x6).png
-  artifactKey: Guid(d436f9306d1867c44b4d0c5c013fcb7e) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Sand Mud Ice Sliced (16x6).png using Guid(d436f9306d1867c44b4d0c5c013fcb7e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5a69aff810fcd9bf7bfc8b46c71406b4') in 0.0698838 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Top Hit (54x52).png
-  artifactKey: Guid(8123182af98fb8147a7d6e6bf458ba4b) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Top Hit (54x52).png using Guid(8123182af98fb8147a7d6e6bf458ba4b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '11d794997b8a50ec76888e0332d3b889') in 0.019842 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Fruits/Strawberry.png
-  artifactKey: Guid(a2c110585eb710b408972fbc3b96136d) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Fruits/Strawberry.png using Guid(a2c110585eb710b408972fbc3b96136d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ce9c3bbc80ff031355b173edc7e3ee06') in 0.0330061 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Scenes/SampleScene.unity using Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '99acdd5f6425be6ddefc7b2cc857c2e6') in 0.0101712 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Settings/Scenes/URP2DSceneTemplate.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '277fe8696e15c7fd263b4fec9ae0e785') in 0.0129148 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box2/Idle.png
-  artifactKey: Guid(f7472d29deaa7414abffd38318319096) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box2/Idle.png using Guid(f7472d29deaa7414abffd38318319096) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fcb7edd0b71ee72e3782b4a49b7ae302') in 0.0191057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Break (28x24).png
-  artifactKey: Guid(32cc0ed12a4ceea46a9c541b632a008f) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Break (28x24).png using Guid(32cc0ed12a4ceea46a9c541b632a008f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7425e0be78cbba3f33627fb093b90561') in 0.0235776 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Idle.png
-  artifactKey: Guid(bcb85d05bbdb8a2468fe865da75a2795) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Idle.png using Guid(bcb85d05bbdb8a2468fe865da75a2795) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fac1ac6c45bee984dfc4e887e1190aa0') in 0.0207057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Fan/Off.png
-  artifactKey: Guid(1f268b33cadc6104287b8111b824e1e8) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Fan/Off.png using Guid(1f268b33cadc6104287b8111b824e1e8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5a15c08a5b450901b8cb58bdbd8a5caa') in 0.017874 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Idle.png
-  artifactKey: Guid(1508ab85aab80754fb0213cd79267961) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Idle.png using Guid(1508ab85aab80754fb0213cd79267961) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1fa2c9729094a3ef82a76b00960f670b') in 0.0225447 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Blue.png
-  artifactKey: Guid(8049ea91a9d5fca4dab4024c0915dbe6) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Blue.png using Guid(8049ea91a9d5fca4dab4024c0915dbe6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b5b99b8afbe484073ebd5515872e09d') in 0.0183757 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Characters/кот бежащий.png
-  artifactKey: Guid(4d2e9821c2a2bf44eb33bb2473dbca74) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/кот бежащий.png using Guid(4d2e9821c2a2bf44eb33bb2473dbca74) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dcf44d355ee3f78940e46685f710a331') in 0.0194128 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Arrow/Idle (18x18).png
-  artifactKey: Guid(f42176bbc0b84b54e83c161abc6eb071) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Arrow/Idle (18x18).png using Guid(f42176bbc0b84b54e83c161abc6eb071) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '595bd4fa10a951250c5a27b3611ddf7f') in 0.0266724 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box2/Hit (28x24).png
-  artifactKey: Guid(666cdca5ea5798c4c83a4ef4b87d64c4) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box2/Hit (28x24).png using Guid(666cdca5ea5798c4c83a4ef4b87d64c4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6fac8ae3cb3d3cdabdbd8438b8ad062e') in 0.0193819 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png
-  artifactKey: Guid(68f54e5fc0fa326458d3e18bdccce704) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png using Guid(68f54e5fc0fa326458d3e18bdccce704) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f9e8333282ea6294420cee39df74b65') in 0.0163661 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Checkpoints/End/End (Pressed) (64x64).png
-  artifactKey: Guid(e2b42ecdf887de146ada435603f4c95b) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Checkpoints/End/End (Pressed) (64x64).png using Guid(e2b42ecdf887de146ada435603f4c95b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bc205e7ff906c183f13e2086ba37fba8') in 0.0249651 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Fire/On (16x32).png
-  artifactKey: Guid(3c112a44cc7dc7a468f4d132c2e7611c) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Fire/On (16x32).png using Guid(3c112a44cc7dc7a468f4d132c2e7611c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '34f68878ac5c10addd7a90101b4d9b1c') in 0.0234511 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Left Hit (54x52).png
-  artifactKey: Guid(680c4a3e214ba5b4d984cd56b1d49668) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Left Hit (54x52).png using Guid(680c4a3e214ba5b4d984cd56b1d49668) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fb285aa943f22577f0cc18016859514e') in 0.021462 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Fruits/Collected.png
-  artifactKey: Guid(be1a5bd13766ec048bab6f4c578baa0f) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Fruits/Collected.png using Guid(be1a5bd13766ec048bab6f4c578baa0f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e1da4b8d4f7010538eb4a7f8147735a0') in 0.0230963 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Blink (42x42).png
-  artifactKey: Guid(e3e6b3d6c57dc7b488e7d1e8be902988) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Blink (42x42).png using Guid(e3e6b3d6c57dc7b488e7d1e8be902988) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b8492a3a4611d162ea388118fcde4f4f') in 0.0184819 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Idle.png
-  artifactKey: Guid(282fa6659f7eabb4f88d7cd347ae7723) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Rock Head/Idle.png using Guid(282fa6659f7eabb4f88d7cd347ae7723) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8bfb4b9e41a72bdabc05a0b13be9b9f5') in 0.0164667 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Checkpoints/End/End (Idle).png
-  artifactKey: Guid(4668f08864533f24b9b5980d5cc57089) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Checkpoints/End/End (Idle).png using Guid(4668f08864533f24b9b5980d5cc57089) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '78af10858eaa7d6a38f690493489b331') in 0.0178004 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Run (32x32).png
-  artifactKey: Guid(e362bc6a7c79fce4db16d145d43a5550) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Run (32x32).png using Guid(e362bc6a7c79fce4db16d145d43a5550) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c6a8f989831d0d6b569d55b2af63e753') in 0.0285146 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Gray.png
-  artifactKey: Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Gray.png using Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9cb630f454ff2954432744a283c0c557') in 0.0160936 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Blocks/Part 1 (22x22).png
-  artifactKey: Guid(09f4b8f50dab5b34495ea64fc80b3047) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Blocks/Part 1 (22x22).png using Guid(09f4b8f50dab5b34495ea64fc80b3047) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c17e6d9d618dc0ac3c48c2be2308bd37') in 0.0238568 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Platforms/Grey Off.png
-  artifactKey: Guid(19602dbd991e72f4c8df688afa341f3d) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Platforms/Grey Off.png using Guid(19602dbd991e72f4c8df688afa341f3d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e75899fd47f9eff94399ef8c08e6f852') in 0.0239996 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Brown.png
-  artifactKey: Guid(ca6a66f8e2ae9c24c8c6b39c49206a0d) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Brown.png using Guid(ca6a66f8e2ae9c24c8c6b39c49206a0d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ccf25984d6b19b1069d7c45690861143') in 0.0217171 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Platforms/Brown Off.png
-  artifactKey: Guid(2cebb83e3d9b5b247be3eb722143beb7) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Platforms/Brown Off.png using Guid(2cebb83e3d9b5b247be3eb722143beb7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dbee12ca0aaac863b3d8cde64a13c7e3') in 0.0168143 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Backgrounds/стена кирпич небо.png
-  artifactKey: Guid(38c87ec36d66dfc4b990e21ea3024da2) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Backgrounds/стена кирпич небо.png using Guid(38c87ec36d66dfc4b990e21ea3024da2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '33017617ae12572cd4c008260cc19471') in 0.0185244 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Saw/Off.png
-  artifactKey: Guid(ca5ce7f3f3ac3bb499d37119b1867d7e) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Saw/Off.png using Guid(ca5ce7f3f3ac3bb499d37119b1867d7e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '922b65a0e4957c705122cf0178ef83b1') in 0.0174547 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box1/Idle.png
-  artifactKey: Guid(48fd9917466ade44fa9bfd8326fab049) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box1/Idle.png using Guid(48fd9917466ade44fa9bfd8326fab049) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b2ed0ff8735d9cb69b4803e41ac88dd') in 0.0185844 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Characters/бегущая ворона лапки врозь.png
-  artifactKey: Guid(ddd57aa71a619f244a3a8f529da4c2c5) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/бегущая ворона лапки врозь.png using Guid(ddd57aa71a619f244a3a8f529da4c2c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '71a62fd7c5a754af0500285aaf82180f') in 0.0198508 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spiked Ball/Spiked Ball.png
-  artifactKey: Guid(60e5d93de53da5642a38fce5925c3efa) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spiked Ball/Spiked Ball.png using Guid(60e5d93de53da5642a38fce5925c3efa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a6f2e0ac99642b3234b659c44f6e4557') in 0.0205853 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Mud Particle.png
-  artifactKey: Guid(54d83c3d1e256b340a5d5f928746a5e5) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Mud Particle.png using Guid(54d83c3d1e256b340a5d5f928746a5e5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1076fb740d9022249d2572d267bbf912') in 0.0221614 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Backgrounds/sky.png
-  artifactKey: Guid(f751dd1d730700749a09aeab850379f0) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Backgrounds/sky.png using Guid(f751dd1d730700749a09aeab850379f0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b075719d81b6e02d1714c853fdb035d0') in 0.0226498 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Characters/Плачущая ворона.png
-  artifactKey: Guid(e702c0743bb371f41aa7643f9b49ed75) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/Плачущая ворона.png using Guid(e702c0743bb371f41aa7643f9b49ed75) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dc39005097276fafbeefc15c6b4964b7') in 0.0197446 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Pink.png
-  artifactKey: Guid(348c3b734b11d3b4aa5c69e25b7113e6) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Pink.png using Guid(348c3b734b11d3b4aa5c69e25b7113e6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8a2cf82ac5cabcab5801ceefe6b953e1') in 0.0163534 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Fall (32x32).png
-  artifactKey: Guid(88794fc5febd16e40a94cacbf542b65b) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Fall (32x32).png using Guid(88794fc5febd16e40a94cacbf542b65b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '974997772ec7cb943f4ee13934891b42') in 0.0204743 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png
-  artifactKey: Guid(27a107940057e8743a507269b18a691a) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png using Guid(27a107940057e8743a507269b18a691a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e950c5586c4a5b2ebe75aa5170e7dbbf') in 0.0268194 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Right Hit (54x52).png
-  artifactKey: Guid(75b1a2f7cb6173c4d826963a35f18512) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spike Head/Right Hit (54x52).png using Guid(75b1a2f7cb6173c4d826963a35f18512) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd535c653ebec5937ec3c39e2e825aff2') in 0.0193044 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png
-  artifactKey: Guid(da2176ef0629bfd42958a94b2bf225a4) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png using Guid(da2176ef0629bfd42958a94b2bf225a4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ea2fa905fe3196ee6cff92378c3a8031') in 0.0214021 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Jump (32x32).png
-  artifactKey: Guid(4872bd1108769a946a6acb68dc156fcf) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Jump (32x32).png using Guid(4872bd1108769a946a6acb68dc156fcf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a8618afc239d69711c1f6979319a8737') in 0.0244723 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Ice Particle.png
-  artifactKey: Guid(48b959756f0ed25489c149ed932257c2) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Traps/Sand Mud Ice/Ice Particle.png using Guid(48b959756f0ed25489c149ed932257c2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c09a15fbd1c18c81688da3abb5101115') in 0.0179692 seconds
+  artifactKey: Guid(4ae2dfdc4771d1545a9cd414b51509bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/ГОРОД ЯРИК.png using Guid(4ae2dfdc4771d1545a9cd414b51509bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89d25ad4156cb635caf0960edd8c878b') in 0.0239077 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Characters/Ворона с шапочкой.png
-  artifactKey: Guid(347bb14f4a8e76e4c8b04f48e0cd1e9d) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/Ворона с шапочкой.png using Guid(347bb14f4a8e76e4c8b04f48e0cd1e9d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7912a55aba9ca1262beaf65ec1f60797') in 0.0238918 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Hit (32x32).png
-  artifactKey: Guid(18a451ae5d817e04bbf3101eaed9466e) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Hit (32x32).png using Guid(18a451ae5d817e04bbf3101eaed9466e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b7a7deb48d03339940ee06eda630e782') in 0.0304123 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Idle (32x32).png
-  artifactKey: Guid(d348dff3819df794186a80cb95777629) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Idle (32x32).png using Guid(d348dff3819df794186a80cb95777629) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3be50ac4ce738d1b6f00a0c0d1ec76f6') in 0.0304453 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Backgrounds/коридор с лампой с рамкой.png
-  artifactKey: Guid(b0b1c57e840d5194384ff56d9dbb7352) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Backgrounds/коридор с лампой с рамкой.png using Guid(b0b1c57e840d5194384ff56d9dbb7352) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '14d177c7b0c3eabb948061ff65b83531') in 0.0237844 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Idle (32x32).png
-  artifactKey: Guid(cd947491a13509945aa1b644f9db3ef2) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Idle (32x32).png using Guid(cd947491a13509945aa1b644f9db3ef2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '212e40c5a1895dc5dcf2873ed3893074') in 0.0346852 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Characters/ЗЛОДЕИ МАЛЕНЬКИЕ КНИЖКИ МАРИО И ДУДЛ.png
-  artifactKey: Guid(5b97f20905eb5d04099c565003b88171) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Characters/ЗЛОДЕИ МАЛЕНЬКИЕ КНИЖКИ МАРИО И ДУДЛ.png using Guid(5b97f20905eb5d04099c565003b88171) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4cbd9eb3a4b1de5d1cc65ead94c711c0') in 0.0199293 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Fall (32x32).png
-  artifactKey: Guid(b6d14bcb8d9dbb349beb9d3619096732) Importer(2089858483,192608db42251d675da83286b1cce702)
-Start importing Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Fall (32x32).png using Guid(b6d14bcb8d9dbb349beb9d3619096732) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2455763cc908cd81f48e917a8dd689bc') in 0.0189632 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  0.728 seconds
-Refreshing native plugins compatible for Editor in 1.56 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.699 seconds
-Domain Reload Profiling: 1430ms
-	BeginReloadAssembly (274ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (68ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (393ms)
-		LoadAssemblies (366ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (169ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (149ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (699ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (555ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (130ms)
-			ProcessInitializeOnLoadAttributes (358ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6785 unused Assets / (6.8 MB). Loaded Objects now: 7467.
-Memory consumption went from 150.5 MB to 143.7 MB.
-Total: 9.648900 ms (FindLiveObjects: 0.763300 ms CreateObjectMapping: 0.520600 ms MarkObjects: 4.934800 ms  DeleteObjects: 3.429400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 55.942985 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Background/Gray.png
-  artifactKey: Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Background/Gray.png using Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '390b5889d631f8107071d97738e29f2b') in 0.1359855 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.419137 seconds.
-  path: Assets/Characters/Ворона с шапочкой.png
-  artifactKey: Guid(347bb14f4a8e76e4c8b04f48e0cd1e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Characters/Ворона с шапочкой.png using Guid(347bb14f4a8e76e4c8b04f48e0cd1e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74f594eca654af1e7638faf5c3783e8e') in 0.0669333 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Characters/кот классический.png
-  artifactKey: Guid(5c6929e37378c3143a2de50ac1dc8b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Characters/кот классический.png using Guid(5c6929e37378c3143a2de50ac1dc8b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6edee1e97e2d789515b584a483f3ed76') in 0.0511804 seconds
+  path: Assets/Backgrounds/sky.png
+  artifactKey: Guid(f751dd1d730700749a09aeab850379f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/sky.png using Guid(f751dd1d730700749a09aeab850379f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '90a6b92fb35bc5020fe03cc9919279a1') in 0.0708616 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/Characters/кот рука нога вправо.png
-  artifactKey: Guid(e109924526a08e2439614be2b89bbe8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Characters/кот рука нога вправо.png using Guid(e109924526a08e2439614be2b89bbe8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2a437ff3a7ffb6743a9fad9f9a7ec17') in 0.0429892 seconds
+  path: Assets/Backgrounds/доска.png
+  artifactKey: Guid(6b9a4f7a4cb1852408f4c4cbb9310528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/доска.png using Guid(6b9a4f7a4cb1852408f4c4cbb9310528) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7e6464c3a639808f11e7884d1023152b') in 0.0250218 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Characters/кот бежащий.png
-  artifactKey: Guid(4d2e9821c2a2bf44eb33bb2473dbca74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Characters/кот бежащий.png using Guid(4d2e9821c2a2bf44eb33bb2473dbca74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eaa2e51668a54e8b022f7eccc79edf7e') in 0.0721298 seconds
+  Time since last request: 0.000035 seconds.
+  path: Assets/Backgrounds/коридор long long duble.png
+  artifactKey: Guid(9d9032cd23b3fc1419564dd4750d2fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/коридор long long duble.png using Guid(9d9032cd23b3fc1419564dd4750d2fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0907f17a9cf64faa4e64a55b529eb44d') in 0.0363392 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Characters/бегущая ворона лапки вниз.png
-  artifactKey: Guid(44ff2c31666d7154f9be0ffffb842ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Characters/бегущая ворона лапки вниз.png using Guid(44ff2c31666d7154f9be0ffffb842ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '638e2b1323f578ee81039da6a0a810d3') in 0.0162644 seconds
+  Time since last request: 0.000020 seconds.
+  path: Assets/Backgrounds/стена кирпич небо.png
+  artifactKey: Guid(38c87ec36d66dfc4b990e21ea3024da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Backgrounds/стена кирпич небо.png using Guid(38c87ec36d66dfc4b990e21ea3024da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a614d7e2ed3a5a0d2c5a261b454fb4d') in 0.0257851 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
