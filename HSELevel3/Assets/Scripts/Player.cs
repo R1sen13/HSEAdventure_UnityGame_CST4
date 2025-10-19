@@ -13,15 +13,13 @@ public class Player : MonoBehaviour
     public float jumpForce = 12f;
     public float gravityScale = 3f;
 
+    public GameObject barrier;
+
 	public Text score;
 	private int sc = 0;
 	private int jumps = 0;
-	public GameObject over;
-	public GameObject win;
 
 	public float groundCheckDistance = 0.1f;
-    public LayerMask groundLayer;
-    public Transform groundCheckPoint;
     
     public float acceleration = 15f;
     public float deceleration = 20f;
@@ -40,21 +38,26 @@ public class Player : MonoBehaviour
     private float horizontalInput;
     private float currentSpeed;
 
+    private bool end = false;
+
     public static bool isPaused;
 
-    public AudioSource death,jump,coin,crow, background;
+    public AudioSource death,jump,coin,crow, background, enemy, alert, music, fanfars;
 
-
-    IEnumerator NextLevelAfterWait() {
+    IEnumerator ReloadAfterWait() {
     	yield return new WaitForSeconds(3.5f);
+    
+    	SceneManager.LoadScene("Game");
+	}
+
+	IEnumerator NextLevelAfterWait() {
+    	yield return new WaitForSeconds(6.5f);
     
     	SceneManager.LoadScene("Game");
 	}
 
 	void Start(){
 		score.text = $"{sc}";
-		win.SetActive(false);
-		over.SetActive(false);	
 
 	    rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -75,13 +78,25 @@ public class Player : MonoBehaviour
 		if(!isPaused){
 			death.UnPause();
 			background.UnPause();
-		    GetInput();
-		    HandleAnimations();
-		    HandleJumpInput();
+			music.UnPause();
+			fanfars.UnPause();
+			if(!isDeath && !end){
+			    GetInput();
+			    HandleAnimations();
+			    HandleJumpInput();
+			}
+			if(end && gameObject.transform.position.x <= 26378){
+				animator.SetFloat("movex", 100);
+				animator.SetBool("isRunning",false);
+				animator.SetFloat("movey",0);
+				rb.transform.position += new Vector3(1,0,0) * (200*Time.deltaTime);
+			}
 	   	}
 	   	else{
 	   		background.Pause();
 			death.Pause();
+			music.Pause();
+			fanfars.Pause();
 		}
 	}
 
@@ -89,17 +104,26 @@ public class Player : MonoBehaviour
 	{
 		if(!isPaused){
 			death.UnPause();
-		    MoveCharacter();
-		    HandleJumpPhysics();
+			background.UnPause();
+			music.UnPause();
+			fanfars.UnPause();
+			if(!isDeath && !end){
+			    MoveCharacter();
+			    HandleJumpPhysics();
+			}
 		}
 		else{
+			background.Pause();
 			death.Pause();
+			music.Pause();
+			fanfars.Pause();
 		}
 	}
 
 	void GetInput()
 	{
 	    horizontalInput = Input.GetAxisRaw("Horizontal");
+
 	    isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 	}
 
@@ -119,14 +143,6 @@ public class Player : MonoBehaviour
 	    
 	    // Применяем скорость (только по X)
 	    rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
-	    if(Mathf.Abs(horizontalInput)>0 && isRunning){
-		    	animator.SetBool("isRunning",true);
-		}
-		else{
-			animator.SetBool("isRunning",false);
-		}
-		animator.SetFloat("movex", Mathf.Abs(horizontalInput));
-		animator.SetFloat("movey", Mathf.Abs(rb.linearVelocity.y));
 
 	    // Поворот спрайта
 	    if (Mathf.Abs(horizontalInput) > 0.1f)
@@ -143,42 +159,20 @@ public class Player : MonoBehaviour
 	    {
 	        if (jumps == 0)
 	        {
-	        	animator.SetBool("isJumping", true);
 	            PerformJump(jumpForce);
 	            jumps=1;
 	        }
 	        else if (jumps==1)
 	        {
-	        	animator.SetBool("isJumping", true);
 	            PerformJump(jumpForce * 0.9f);
 	            jumps = 2;
 	        }
-	    }
-	    if (Input.GetKeyUp(KeyCode.Space)){
-			animator.SetBool("isJumping", false);
 	    }
 	    // Переменная высота прыжка (отпускание кнопки)
 	    if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
 	    {
 	        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
 	    }
-	}
-
-	private void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.CompareTag("ground")){
-			jumps = 0;
-		}
-		if(col.gameObject.CompareTag("death_platform")){
-			if(!isDeath){
-				background.Stop();
-				death.Play();
-
-				walkSpeed = 0;
-				runSpeed = 0;
-				StartCoroutine(NextLevelAfterWait());
-			}
-			isDeath = true;
-		}
 	}
 
 
@@ -208,36 +202,31 @@ public class Player : MonoBehaviour
 	{
 	    if (animator != null)
 	    {
-	        animator.SetFloat("Speed", Mathf.Abs(currentSpeed));
-	        animator.SetBool("IsRunning", isRunning);
-	        animator.SetBool("IsGrounded", isGrounded);
-	        animator.SetFloat("VerticalVelocity", rb.linearVelocity.y);
-	    }
-	}
-
-
-	void OnDrawGizmosSelected()
-	{
-	    if (groundCheckPoint != null)
-	    {
-	        Gizmos.color = isGrounded ? Color.green : Color.red;
-	        Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckDistance);
-	    }
-	}
-
-	void HandleSkidAnimation()
-	{
-	    if (isGrounded && Mathf.Sign(horizontalInput) != Mathf.Sign(currentSpeed) && Mathf.Abs(currentSpeed) > 1f)
-	    {
-	        animator.SetBool("IsSkidding", true);
-	    }
-	    else
-	    {
-	        animator.SetBool("IsSkidding", false);
+	        animator.SetFloat("movex", (int)Mathf.Abs(currentSpeed));
+		    if(Mathf.Abs(horizontalInput)>0 && isRunning){
+				animator.SetBool("isRunning",true);
+			}
+			else{
+				animator.SetBool("isRunning",false);
+			}
+	        animator.SetFloat("movey", Mathf.Abs(rb.linearVelocity.y));
 	    }
 	}
 
 	private void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.CompareTag("end")){
+			end = true;
+			walkSpeed = 0;
+			music.Stop();
+			fanfars.Play();
+			StartCoroutine(NextLevelAfterWait());
+		}
+
+		if(col.gameObject.CompareTag("enemytrigger") && !isDeath){
+			rb.linearVelocity = new Vector2(rb.linearVelocity.x, 775);
+			Destroy(col.transform.parent.gameObject);
+			enemy.Play();
+		}
 		if(col.gameObject.CompareTag("ground")){
 			jumps = 0;
 		}
@@ -246,7 +235,38 @@ public class Player : MonoBehaviour
 			coin.Play();
 			sc+=1;
 			score.text = $"{sc}";
+			if(sc == 52){
+		    	alert.Play();
+
+		    	barrier.SetActive(false);
+		    	Destroy(barrier);
+		    	background.Stop();
+		    	music.Play();
+		    }
 		}
 	}
+	private void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.CompareTag("ground")){
+			jumps = 0;
+		}
+		if(col.gameObject.CompareTag("death_platform") || col.gameObject.CompareTag("enemy")){
+			if(!isDeath){
+				background.Stop();
+				music.Stop();
+				death.Play();
 
+				animator.SetBool("isDeath",true);
+				if(col.gameObject.CompareTag("enemy")){
+					Collider2D first = gameObject.GetComponent<Collider2D> ();
+					Collider2D second = col.gameObject.GetComponent<Collider2D> ();
+				    Physics2D.IgnoreCollision(first, second, true);
+				    Physics2D.queriesHitTriggers = false;
+				}
+				runSpeed = 0;
+				walkSpeed = 0;
+				StartCoroutine(ReloadAfterWait());
+			}
+			isDeath = true;
+		}
+	}
 }

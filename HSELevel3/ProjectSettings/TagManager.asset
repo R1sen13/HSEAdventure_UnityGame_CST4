@@ -10,6 +10,12 @@ TagManager:
   - player
   - deleteclouds
   - death_platform
+  - pl1
+  - pl2
+  - enemytrigger
+  - barrier
+  - end
+  - end_trigger
   layers:
   - Default
   - TransparentFX
