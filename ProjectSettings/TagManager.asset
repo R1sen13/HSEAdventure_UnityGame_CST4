@@ -6,6 +6,11 @@ TagManager:
   tags:
   - LeftBorder
   - RightBorder
+  - DeadZone
+  - StartPlatform
+  - Platform
+  - EndingPlatform
+  - Logic
   layers:
   - Default
   - TransparentFX
