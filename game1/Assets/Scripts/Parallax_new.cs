@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Parallax_new : MonoBehaviour
 {
-
+    public static bool isPaused;
     private MeshRenderer meshRenderer;
     public float animationSpeed = 1f;
 
@@ -13,6 +13,9 @@ public class Parallax_new : MonoBehaviour
 
     private void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
+        if (!isPaused)
+        {
+            meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
+        }
     }
 }

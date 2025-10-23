@@ -38,40 +38,54 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        // Синхронизируем все флаги паузы
+
+        // Приостанавливаем музыку при паузе
+        if (gameManager.backgroundMusic != null && gameManager.backgroundMusic.isPlaying)
+        {
+            gameManager.backgroundMusic.Pause();
+        }
+
         Parallax_new.isPaused = true;
         Pipes.isPaused = true;
         Vorona_script.isPaused = true;
-        sound.Play();
     }
 
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
 
-        // Восстанавливаем timeScale только если игра была начата
         if (gameManager.IsGameStarted())
         {
             Time.timeScale = 1f;
             isPaused = false;
-            // Синхронизируем все флаги паузы
+
+            // Возобновляем музыку при возобновлении игры
+            if (gameManager.backgroundMusic != null)
+            {
+                gameManager.backgroundMusic.UnPause();
+            }
+
             Parallax_new.isPaused = false;
             Pipes.isPaused = false;
             Vorona_script.isPaused = false;
         }
         else
         {
-            // Если игра не начата, остаемся в меню с Time.timeScale = 0
             isPaused = false;
         }
-
-        sound.Play();
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
         isPaused = false;
+
+        // При перезапуске включаем игровую музыку
+        if (gameManager != null)
+        {
+            gameManager.PlayGameMusic();
+        }
+
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -79,6 +93,13 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+
+        // При возврате в меню включаем музыку меню
+        if (gameManager != null)
+        {
+            gameManager.PlayMenuMusic();
+        }
+
         SceneManager.LoadScene("Menu");
     }
 }

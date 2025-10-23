@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Pipes : MonoBehaviour
 {
+    public static bool isPaused;
     public float speed = 5f;
     private float leftEdge;
 
@@ -11,11 +12,14 @@ public class Pipes : MonoBehaviour
     }
     private void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
-
-        if (transform.position.x < leftEdge)
+        if (!isPaused)
         {
-            Destroy(gameObject);
+            transform.position += Vector3.left * speed * Time.deltaTime;
+
+            if (transform.position.x < leftEdge)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

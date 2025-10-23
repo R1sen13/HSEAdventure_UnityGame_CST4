@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\437\\game1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|c:\\users\\437\\game1\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|c:\\users\\437\\game1\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\parallax_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\parallax_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\pipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\vorona_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vorona_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\vorona_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vorona_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\pipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|C:\\Users\\437\\game1\\assets\\scripts\\parallax_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D5BADD-3DEE-C92E-117D-08F26EDF9314}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\parallax_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,37 +39,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwA4AAAAeAAAAAAAAAA==",
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T21:16:22.716Z",
+              "WhenOpened": "2025-10-18T16:31:51.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwLgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T21:16:22.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Parallax_new.cs",
               "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\Parallax_new.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Parallax_new.cs",
               "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\Parallax_new.cs",
               "RelativeToolTip": "Assets\\Scripts\\Parallax_new.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:09:57.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Pipes.cs",
               "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\Pipes.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pipes.cs",
               "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\Pipes.cs",
               "RelativeToolTip": "Assets\\Scripts\\Pipes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:09:50.83Z"
             },
@@ -77,19 +93,19 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
               "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\Spawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:09:47.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Vorona_script.cs",
               "DocumentMoniker": "C:\\Users\\437\\game1\\Assets\\Scripts\\Vorona_script.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Vorona_script.cs",
               "ToolTip": "C:\\Users\\437\\game1\\Assets\\Scripts\\Vorona_script.cs",
               "RelativeToolTip": "Assets\\Scripts\\Vorona_script.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwFMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:09:39.181Z"
             }
