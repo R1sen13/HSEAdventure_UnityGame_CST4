@@ -28,6 +28,9 @@ public class player : MonoBehaviour
     private float lastAttackTime = 0f;  
     private bool facingRight = true;
 
+    [Header("Пауза")]
+    public static bool isPaused;
+
     private void Start()
     {
         if (rb == null)
@@ -39,10 +42,12 @@ public class player : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
-        HandleJump();
-        HandleGlide();
-        HandleAttack();
+        if(!isPaused){
+            HandleMovement();
+            HandleJump();
+            HandleGlide();
+            HandleAttack();
+        }
     }
 
     
@@ -115,6 +120,7 @@ public class player : MonoBehaviour
         {
             ThrowBook();
             lastAttackTime = Time.time;
+            anim.SetTrigger("Attack");
         }
     }
 

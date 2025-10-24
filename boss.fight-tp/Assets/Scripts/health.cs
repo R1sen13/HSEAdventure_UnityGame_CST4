@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class Health : MonoBehaviour
     private HealthBar healthBarUI;
 
     [Header("Опции")]
+    public bool destroyOnDeathPlayer = true;
     public bool destroyOnDeath = true;
+    public bool isPlayer = false;   // Флаг для различия игрока и босса
 
     void Awake()
     {
@@ -53,15 +56,38 @@ public class Health : MonoBehaviour
             healthBarUI.UpdateHealth(currentHealth, maxHealth);
     }
 
-    // Смерть персонажа
     private void Die()
     {
-        if (healthBarUI != null)
-            Destroy(healthBarUI.gameObject);
 
-        if (destroyOnDeath)
-            Destroy(gameObject);
+
+        // Проверяем, кто умер (игрок или босс)
+        if (isPlayer)
+        {
+            PlayerDie();  // Если это игрок, перезапускаем уровень
+        }
+        else
+        {
+            BossDie();  // Если это босс, просто уничтожаем его
+        }
     }
 
-    public float GetHealth() => currentHealth;
+    // Логика смерти игрока
+    private void PlayerDie()
+    {
+        Debug.Log("Player has died!");
+
+        // Можно добавить дополнительные эффекты смерти, если нужно
+
+        // Перезапуск уровня при смерти игрока
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  // Загружаем текущую сцену заново
+    }
+
+    // Логика смерти босса
+    private void BossDie()
+    {
+        Debug.Log("Boss has died!");
+
+        // Уничтожаем объект босса
+        Destroy(gameObject); // Удаляем объект босса с игры
+    }
 }

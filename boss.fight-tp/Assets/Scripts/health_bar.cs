@@ -9,6 +9,9 @@ public class HealthBar : MonoBehaviour
     private Transform target;        // За кем следим
     private Canvas canvas;
 
+    [Header("Пауза")]
+    public static bool isPaused;
+
     // Привязка полоски к персонажу
     public void SetTarget(Transform newTarget)
     {
@@ -34,10 +37,12 @@ public class HealthBar : MonoBehaviour
 
     void LateUpdate()
     {
-        if (target == null || canvas == null) return;
+        if(!isPaused){
+            if (target == null || canvas == null) return;
 
-        // Преобразуем мировые координаты в экранные
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position + offset);
-        transform.position = screenPos;
+            // Преобразуем мировые координаты в экранные
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position + offset);
+            transform.position = screenPos;
+            }
     }
 }

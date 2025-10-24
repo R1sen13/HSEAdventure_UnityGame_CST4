@@ -13,6 +13,8 @@ public class Book : MonoBehaviour
     private float direction = 1f;
     private float speed;
      
+    [Header("Пауза")]
+    public static bool isPaused;
 
     private void Awake()
     {
@@ -56,10 +58,13 @@ public class Book : MonoBehaviour
 
     private void Update()
     {
-        transform.position += new Vector3( direction * speed * Time.deltaTime, 0, direction * speed * Time.deltaTime);
+        if(!isPaused){
+            transform.position += new Vector3( direction * speed * Time.deltaTime, 0, direction * speed * Time.deltaTime);
 
-        if (visual != null)
-            visual.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            if (visual != null){
+                visual.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

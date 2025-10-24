@@ -41,6 +41,9 @@ public class BossCat : MonoBehaviour
 
     private bool facingRight = true;
 
+    [Header("Пауза")]
+    public static bool isPaused;
+
     void Start()
     {
         if (rb == null)
@@ -56,75 +59,81 @@ public class BossCat : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return;
+        if(!isPaused){
+            if (player == null) return;
 
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Если игрок в зоне обнаружения
-        if (distanceToPlayer <= detectionRange)
-        {
-        if (!musicPlaying && bossMusic != null)
-        {
-        bossMusic.Play();
-        musicPlaying = true;
-        }
-    }
-    else
-    {   
-    // Если игрок вышел из зоны, музыка останавливается (опционально)
-    if (musicPlaying && bossMusic != null)
-    {
-        bossMusic.Stop();
-        musicPlaying = false;
-    }
-}
-
-        // Смена состояния
-        if (distanceToPlayer > detectionRange)
-        {
-            SetState(BossState.Idle);
-        }
-        else if (distanceToPlayer > stopDistance)
-        {
-            SetState(BossState.Walk);
+            // Если игрок в зоне обнаружения
+            if (distanceToPlayer <= detectionRange)
+            {
+            if (!musicPlaying && bossMusic != null)
+            {
+            bossMusic.Play();
+            musicPlaying = true;
+            }
         }
         else
+        {   
+        // Если игрок вышел из зоны, музыка останавливается (опционально)
+        if (musicPlaying && bossMusic != null)
         {
-            SetState(BossState.Attack);
+            bossMusic.Stop();
+            musicPlaying = false;
         }
+    }
 
-        // Поведение
-        switch (currentState)
-        {
-            case BossState.Idle:
-                StopMoving();
-                break;
+            // Смена состояния
+            if (distanceToPlayer > detectionRange)
+            {
+                SetState(BossState.Idle);
+            }
+            else if (distanceToPlayer > stopDistance)
+            {
+                SetState(BossState.Walk);
+            }
+            else
+            {
+                SetState(BossState.Attack);
+            }
 
-            case BossState.Walk:
-                MoveTowardsPlayer();
-                break;
+            // Поведение
+            switch (currentState)
+            {
+                case BossState.Idle:
+                    StopMoving();
+                    break;
 
-            case BossState.Attack:
-                StopMoving();
-                TryPawAttack();
-                break;
+                case BossState.Walk:
+                    MoveTowardsPlayer();
+                    break;
+
+                case BossState.Attack:
+                    StopMoving();
+                    TryPawAttack();
+                    anim.SetTrigger("Attack");
+                    break;
+            }
+
+            // Бросок книги
+            if (Time.time >= nextBookTime)
+            {
+                ThrowBook();
+                nextBookTime = Time.time + bookCooldown;
+            }
+
+            // Прыжок
+            if (Time.time >= nextJumpTime)
+            {
+                Jump();
+                nextJumpTime = Time.time + jumpInterval;
+            }
+
+            FlipTowardsPlayer();
         }
-
-        // Бросок книги
-        if (Time.time >= nextBookTime)
-        {
-            ThrowBook();
-            nextBookTime = Time.time + bookCooldown;
+        else {
+            bossMusic.Pause();
         }
-
-        // Прыжок
-        if (Time.time >= nextJumpTime)
-        {
-            Jump();
-            nextJumpTime = Time.time + jumpInterval;
-        }
-
-        FlipTowardsPlayer();
     }
 
     private void SetState(BossState newState)
@@ -168,17 +177,20 @@ public class BossCat : MonoBehaviour
 
     private void TryPawAttack()
 {
+    anim.SetTrigger("Attack");
     if (Time.time - lastPawAttack < pawCooldown) return;
     lastPawAttack = Time.time;
 
     // Проверяем, есть ли игрок в радиусе атаки
     Collider2D[] hits = Physics2D.OverlapCircleAll(pawPoint.position, attackRange, playerLayer);
+    anim.SetTrigger("Attack");
 
     foreach (Collider2D hit in hits)
     {
         Health playerHealth = hit.GetComponent<Health>();
         if (playerHealth != null)
         {
+            anim.SetTrigger("Attack");
             playerHealth.TakeDamage(pawDamage);
             Debug.Log("Boss heat lapoy!");
         }
