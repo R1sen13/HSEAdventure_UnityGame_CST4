@@ -16,8 +16,18 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+        LogicManager.isPaused = false;
         pauseMenu.SetActive(false);
+        CameraFollow.isPaused = false;
+        CloudMovement.isPaused = false;
+        EnemyScript.isPaused = false;
+        MusicManager.isPaused = false;
+        PlatformScript.isPaused = false;
+        PlayerController.isPaused = false;
+        MovingEnemyMovement.isPaused = false;
         soundPlayer = GameObject.FindWithTag("MusicManager").GetComponent<MusicManager>();
+
 
 
     }
@@ -50,7 +60,6 @@ public class PauseMenu : MonoBehaviour
         PlayerController.isPaused = true;
         MovingEnemyMovement.isPaused = true;
         // StaticEnemyMovement.isPaused = true;
-        soundPlayer.PlayPause();
         LogicManager.isPaused = true;
         MusicManager.isPaused = true;
 
@@ -69,19 +78,19 @@ public class PauseMenu : MonoBehaviour
         PlatformScript.isPaused = false;
         PlayerController.isPaused = false;
         MovingEnemyMovement.isPaused = false;
-        soundPlayer.PlayPause();
         // StaticEnemyMovement.isPaused = true;
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  //ЗДЕСЬ МЕНЯЕТЕ НАЗВАНИЕ С Game НА НАЗВАНИЕ ВАШЕЙ СЦЕНЫ
+        // SceneManager.LoadScene("HSEDoodle");  //ЗДЕСЬ МЕНЯЕТЕ НАЗВАНИЕ С Game НА НАЗВАНИЕ ВАШЕЙ СЦЕНЫ
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("HSEDoodle");
+        // SceneManager.LoadScene(....);
 
     }
 

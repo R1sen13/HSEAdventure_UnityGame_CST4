@@ -15,6 +15,7 @@ public class LogicManager : MonoBehaviour
     public MusicManager soundPlayer;
     void Start()
     {
+        SceneManager.LoadScene("NewLevel", LoadSceneMode.Additive);
         player = GameObject.FindWithTag("Player")?.GetComponent<PlayerController>();
         soundPlayer = GameObject.FindWithTag("MusicManager").GetComponent<MusicManager>();
 

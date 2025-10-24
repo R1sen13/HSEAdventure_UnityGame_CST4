@@ -15,17 +15,8 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         // Проверка, есть ли AudioSource
-        musicSource = GetComponent<AudioSource>();
-        if (musicSource == null)
-        {
-            musicSource = gameObject.AddComponent<AudioSource>();
-        }
-
-        sfxSource = GetComponent<AudioSource>();
-        if (sfxSource == null)
-        {
-            sfxSource = gameObject.AddComponent<AudioSource>();
-        }
+        musicSource = gameObject.AddComponent<AudioSource>();
+        sfxSource = gameObject.AddComponent<AudioSource>();
 
         musicSource.clip = musicClip;
         musicSource.loop = true;   // Loop музыки
@@ -36,7 +27,7 @@ public class MusicManager : MonoBehaviour
 
         sfxSource.loop = false;   // Loop музыки
         sfxSource.playOnAwake = false;
-        sfxSource.volume = volume + 0.1f; // громкость 
+        sfxSource.volume = volume + 0.2f; // громкость 
         sfxSource.ignoreListenerPause = true;
     }
     public void PlayJump()
