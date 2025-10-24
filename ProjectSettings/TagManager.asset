@@ -11,6 +11,8 @@ TagManager:
   - Platform
   - EndingPlatform
   - Logic
+  - FinishPanel
+  - MusicManager
   layers:
   - Default
   - TransparentFX

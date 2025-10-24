@@ -5,19 +5,26 @@ using UnityEngine.UIElements;
 public class PlatformScript : MonoBehaviour
 {
     public float jumpForce = 10f;
+    public MusicManager soundPlayer;
+    public static bool isPaused;
     public Transform gameCamera;
+
 
     void Start()
     {
-        gameCamera = GameObject.FindWithTag("MainCamera")?.transform;
+        gameCamera = GameObject.FindWithTag("MainCamera").transform;
+        soundPlayer = GameObject.FindWithTag("MusicManager").GetComponent<MusicManager>();
 
     }
 
     void Update()
     {
-        if (gameObject.transform.position.y < gameCamera.position.y - 5.6f && gameObject.CompareTag("Platform"))
+        if (!isPaused)
         {
-            Destroy(gameObject);
+            if (gameObject.transform.position.y < gameCamera.position.y - 5.6f && gameObject.CompareTag("Platform"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -33,6 +40,7 @@ public class PlatformScript : MonoBehaviour
                 Vector2 velocity = rb.linearVelocity;
                 velocity.y = jumpForce;
                 rb.linearVelocity = velocity;
+                soundPlayer.PlayJump();
 
 
 

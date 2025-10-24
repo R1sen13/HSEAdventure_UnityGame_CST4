@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 5135024814227531264}
   - component: {fileID: 2193625824751304793}
   - component: {fileID: 7736092265567800480}
-  - component: {fileID: 5349309030196233627}
+  - component: {fileID: 2449413525628391240}
   m_Layer: 7
   m_Name: Finish_Platform
   m_TagString: EndingPlatform
@@ -463,7 +463,7 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &5349309030196233627
+--- !u!114 &2449413525628391240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,4 +474,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf9e39cadab73ff4b954d490bcd3cd1c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPlatform
+  uiPanel: {fileID: 0}

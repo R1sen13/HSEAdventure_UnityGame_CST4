@@ -3,6 +3,7 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     public float speed = 2f;
+    public static bool isPaused;
     public float distance = 3f;
     private Vector2 startPos;
     private bool movingRight = true;
@@ -15,18 +16,21 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (movingRight)
+        if (!isPaused)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            if (transform.position.x >= 3f)
-                movingRight = false;
-        }
-        else
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            if (transform.position.x <= -2.5f)
-                movingRight = true;
+            if (movingRight)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                if (transform.position.x >= 3f)
+                    movingRight = false;
+            }
+            else
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                if (transform.position.x <= -2.5f)
+                    movingRight = true;
 
+            }
         }
 
     }

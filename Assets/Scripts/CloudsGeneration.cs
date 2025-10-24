@@ -6,6 +6,7 @@ public class CloudSpawner : MonoBehaviour
     public GameObject cloudPrefab_1;
     public GameObject cloudPrefab_2;
     private GameObject chosen_prefab;
+    public static bool isPaused;
 
     public float spawnInterval = 15f;
 
@@ -18,34 +19,37 @@ public class CloudSpawner : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= spawnInterval)
+        if (!isPaused)
         {
-            // верхняя граница камеры
-            float top = Camera.main.orthographicSize + Camera.main.transform.position.y;
+            timer += Time.deltaTime;
 
-            // чуть ниже верхнего края
-            Vector3 pos = new Vector3(Camera.main.transform.position.x + 5.2f, top - 2f + Random.Range(-1.5f, 1.4f), 0f);
-
-            // выбор облака
-            int choice = Random.Range(1, 3);
-            switch (choice)
+            if (timer >= spawnInterval)
             {
-                case 1:
-                    chosen_prefab = cloudPrefab_1;
-                    break;
-                case 2:
-                    chosen_prefab = cloudPrefab_2;
-                    break;
+                // верхняя граница камеры
+                float top = Camera.main.orthographicSize + Camera.main.transform.position.y;
+
+                // чуть ниже верхнего края
+                Vector3 pos = new Vector3(Camera.main.transform.position.x + 5.2f, top - 2f + Random.Range(-1.5f, 1.4f), 0f);
+
+                // выбор облака
+                int choice = Random.Range(1, 3);
+                switch (choice)
+                {
+                    case 1:
+                        chosen_prefab = cloudPrefab_1;
+                        break;
+                    case 2:
+                        chosen_prefab = cloudPrefab_2;
+                        break;
+                }
+
+                GameObject cloud = Instantiate(chosen_prefab, pos, Quaternion.identity);
+
+                // делаем облако дочерним
+                cloud.transform.parent = Camera.main.transform;
+
+                timer = 0f; // сброс
             }
-
-            GameObject cloud = Instantiate(chosen_prefab, pos, Quaternion.identity);
-
-            // делаем облако дочерним
-            cloud.transform.parent = Camera.main.transform;
-
-            timer = 0f; // сброс
         }
     }
 }

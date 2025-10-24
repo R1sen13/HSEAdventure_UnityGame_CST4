@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
+    public static bool isPaused;
     public LogicManager logic;
     public bool isGameOver = false;
     public Sprite aliveSprite;
@@ -28,7 +29,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * moveSpeed;
+        if (!isPaused)
+            movement = Input.GetAxis("Horizontal") * moveSpeed;
 
     }
 
@@ -44,22 +46,25 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isGameOver)
+        if (!isPaused)
         {
-            // Base moving script
-            Vector2 velocity = rb.linearVelocity;
-            velocity.x = movement;
-            rb.linearVelocity = velocity;
-            // Flipping the sprite
-            if (movement > 0)
+            if (!isGameOver)
             {
-                spriteRenderer.flipX = true;
-            }
-            else if (movement < 0)
-            {
-                spriteRenderer.flipX = false;
-            }
+                // Base moving script
+                Vector2 velocity = rb.linearVelocity;
+                velocity.x = movement;
+                rb.linearVelocity = velocity;
+                // Flipping the sprite
+                if (movement > 0)
+                {
+                    spriteRenderer.flipX = true;
+                }
+                else if (movement < 0)
+                {
+                    spriteRenderer.flipX = false;
+                }
 
+            }
         }
     }
 

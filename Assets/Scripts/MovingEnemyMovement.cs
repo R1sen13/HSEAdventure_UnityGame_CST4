@@ -8,6 +8,7 @@ public class MovingEnemyMovement : MonoBehaviour
     private Vector2 startPos;
     private bool movingRight = true;
     SpriteRenderer spriteRenderer;
+    public static bool isPaused;
     public float floatSpeed = 1f;   // скорость вертикального покачивания
     public float floatHeight = 0.25f; // амплитуда
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,27 +33,30 @@ public class MovingEnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (movingRight)
+        if (!isPaused)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            if (transform.position.x >= 3f)
+            if (movingRight)
             {
-                movingRight = false;
-                spriteRenderer.flipX = true;
-            }
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                if (transform.position.x >= 3f)
+                {
+                    movingRight = false;
+                    spriteRenderer.flipX = true;
+                }
 
-        }
-        else
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            if (transform.position.x <= -2.5f)
+            }
+            else
             {
-                movingRight = true;
-                spriteRenderer.flipX = false;
-            }
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                if (transform.position.x <= -2.5f)
+                {
+                    movingRight = true;
+                    spriteRenderer.flipX = false;
+                }
 
+            }
+            float yOffset = Mathf.Sin(Time.time * floatSpeed) * floatHeight;
+            transform.position = new Vector3(transform.position.x, startPos.y + yOffset, transform.position.z);
         }
-        float yOffset = Mathf.Sin(Time.time * floatSpeed) * floatHeight;
-        transform.position = new Vector3(transform.position.x, startPos.y + yOffset, transform.position.z);
     }
 }
