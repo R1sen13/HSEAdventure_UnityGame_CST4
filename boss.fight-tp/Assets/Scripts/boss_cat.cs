@@ -34,6 +34,8 @@ public class BossCat : MonoBehaviour
     [Header("Компоненты")]
     public Rigidbody2D rb;
     public Transform player;
+    public GameObject Diplom;
+
 
     [Header("Audio")]
     public AudioSource bossMusic;      

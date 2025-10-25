@@ -15,6 +15,9 @@ public class Health : MonoBehaviour
     public bool destroyOnDeathPlayer = true;
     public bool destroyOnDeath = true;
     public bool isPlayer = false;   // Флаг для различия игрока и босса
+    public GameObject Diplom;
+     public AudioSource bossMusic;      
+    private bool musicPlaying = false; 
 
     void Awake()
     {
@@ -89,5 +92,20 @@ public class Health : MonoBehaviour
 
         // Уничтожаем объект босса
         Destroy(gameObject); // Удаляем объект босса с игры
+        // Выпадение предмета (гарантированно)
+        DropItem();
+        bossMusic.Stop();
+        musicPlaying = false;
+
+    }
+
+    // Метод гарантированного выпадения предмета
+    private void DropItem()
+    {
+        // Генерируем позицию выпадения предмета рядом с боссом
+        Vector3 dropPosition = transform.position + new Vector3(Random.Range(-2f, 2f), 1f, 0f); // Немного вверх и в стороны
+
+        // Создаём предмет в указанной позиции
+        Instantiate(Diplom, dropPosition, Quaternion.identity);
     }
 }
